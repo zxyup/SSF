@@ -16,6 +16,7 @@ Hacked together by / Copyright 2020 Ross Wightman (https://github.com/rwightman)
 """
 import os
 import sys
+import pickle
 
 sys.path.append(os.path.abspath(os.path.join(__file__, "..", "..")))
 
@@ -60,7 +61,8 @@ TH=0.01
 import ipdb
 
 
-writer = SummaryWriter('/media/disk1/zxy/ssf/vit_base_patch16_224_in21k/cifar_100/pruning_sample/logs/5_300')
+writer = SummaryWriter('/data/datasets/zxy/logs/200')
+msaver_path='/data/datasets/zxy/saver/200/'
 
 try:
     from apex import amp
@@ -773,6 +775,10 @@ def main():
                 amp_autocast=amp_autocast, loss_scaler=loss_scaler, model_ema=model_ema, mixup_fn=mixup_fn,
                 regularizer=regularizer
                 )
+            
+            # saver
+
+            msaver(model,epoch)
         optimizer.param_groups[0]['lr']=old_lr
         mask_dict={}
         total,pruned=0,0
@@ -1088,6 +1094,20 @@ def validate(epoch,model, loader, loss_fn, args, amp_autocast=suppress, log_suff
     metrics = OrderedDict([('loss', losses_m.avg), ('top1', top1_m.avg), ('top5', top5_m.avg),('pruned',pruned)])
     
     return metrics
+
+
+def msaver(model,epoch=0):
+    ssf_scale,ssf_shift={},{}
+    lss=[]
+    for name, para in model.named_parameters():
+        if "ssf_scale" in name:
+            ssf_scale[name]=para.data.detach().cpu().numpy()
+        elif "ssf_shift" in name:
+            ssf_shift[name]=para.data.detach().cpu().numpy()
+    lss.append(ssf_scale)
+    lss.append(ssf_shift)
+    with open(msaver_path+str(epoch+1)+'.pkl', 'wb') as f:
+	    pickle.dump(lss, f)
 
 
 if __name__ == '__main__':

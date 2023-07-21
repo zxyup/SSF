@@ -1,0 +1,448 @@
+/home/xmu/anaconda3/envs/ssfn/lib/python3.10/site-packages/torch/distributed/launch.py:180: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use_env is set by default in torchrun.
+If your script expects `--local_rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  warnings.warn(
+Training with a single process on 1 GPUs.
+Data processing configuration for current model + dataset:
+	input_size: (3, 224, 224)
+	interpolation: bicubic
+	mean: (0.5, 0.5, 0.5)
+	std: (0.5, 0.5, 0.5)
+	crop_pct: 0.9
+/home/xmu/anaconda3/envs/ssfn/lib/python3.10/site-packages/torch_pruning/dependency.py:360: UserWarning: Unwrapped parameters detected: ['blocks.3.ssf_shift_1', 'blocks.8.attn.ssf_shift_2', 'blocks.9.mlp.ssf_shift_1', 'blocks.1.mlp.ssf_scale_2', 'blocks.5.mlp.ssf_scale_2', 'blocks.8.ssf_scale_2', 'blocks.10.attn.ssf_scale_1', 'patch_embed.ssf_shift_1', 'blocks.0.ssf_shift_2', 'blocks.2.attn.ssf_shift_1', 'blocks.4.ssf_shift_2', 'blocks.6.attn.ssf_shift_1', 'blocks.6.mlp.ssf_shift_2', 'blocks.10.mlp.ssf_shift_2', 'blocks.2.ssf_scale_1', 'blocks.7.attn.ssf_scale_2', 'blocks.8.mlp.ssf_scale_1', 'blocks.11.attn.ssf_scale_2', 'blocks.0.mlp.ssf_shift_1', 'blocks.3.attn.ssf_shift_2', 'blocks.4.mlp.ssf_shift_1', 'blocks.7.ssf_shift_1', 'blocks.11.ssf_shift_1', 'blocks.5.attn.ssf_scale_1', 'blocks.0.attn.ssf_scale_1', 'blocks.1.attn.ssf_scale_1', 'blocks.3.ssf_scale_2', 'blocks.9.mlp.ssf_scale_2', 'blocks.1.mlp.ssf_shift_2', 'blocks.5.mlp.ssf_shift_2', 'blocks.8.ssf_shift_2', 'blocks.10.attn.ssf_shift_1', 'blocks.2.attn.ssf_scale_2', 'blocks.3.mlp.ssf_scale_1', 'blocks.6.ssf_scale_1', 'blocks.6.attn.ssf_scale_2', 'blocks.10.ssf_scale_1', 'blocks.2.ssf_shift_1', 'blocks.7.attn.ssf_shift_2', 'blocks.8.mlp.ssf_shift_1', 'blocks.11.attn.ssf_shift_2', 'blocks.0.mlp.ssf_scale_2', 'blocks.4.mlp.ssf_scale_2', 'blocks.7.ssf_scale_2', 'blocks.9.attn.ssf_scale_1', 'blocks.11.ssf_scale_2', 'blocks.0.attn.ssf_shift_1', 'blocks.1.attn.ssf_shift_1', 'blocks.3.ssf_shift_2', 'blocks.5.attn.ssf_shift_1', 'blocks.9.mlp.ssf_shift_2', 'blocks.1.ssf_scale_1', 'blocks.5.ssf_scale_1', 'blocks.7.mlp.ssf_scale_1', 'blocks.10.attn.ssf_scale_2', 'blocks.11.mlp.ssf_scale_1', 'ssf_scale_1', 'blocks.2.attn.ssf_shift_2', 'blocks.3.mlp.ssf_shift_1', 'blocks.6.ssf_shift_1', 'blocks.6.attn.ssf_shift_2', 'blocks.10.ssf_shift_1', 'blocks.4.attn.ssf_scale_1', 'blocks.2.ssf_scale_2', 'blocks.8.mlp.ssf_scale_2', 'blocks.0.mlp.ssf_shift_2', 'blocks.4.mlp.ssf_shift_2', 'blocks.7.ssf_shift_2', 'blocks.9.attn.ssf_shift_1', 'blocks.11.ssf_shift_2', 'blocks.5.attn.ssf_scale_2', 'blocks.0.attn.ssf_scale_2', 'blocks.1.attn.ssf_scale_2', 'blocks.2.mlp.ssf_scale_1', 'blocks.9.ssf_scale_1', 'blocks.1.ssf_shift_1', 'blocks.5.ssf_shift_1', 'blocks.7.mlp.ssf_shift_1', 'blocks.10.attn.ssf_shift_2', 'blocks.11.mlp.ssf_shift_1', 'ssf_shift_1', 'blocks.3.mlp.ssf_scale_2', 'blocks.6.ssf_scale_2', 'blocks.8.attn.ssf_scale_1', 'blocks.10.ssf_scale_2', 'blocks.4.attn.ssf_shift_1', 'blocks.2.ssf_shift_2', 'blocks.8.mlp.ssf_shift_2', 'patch_embed.ssf_scale_1', 'blocks.0.ssf_scale_1', 'blocks.4.ssf_scale_1', 'blocks.6.mlp.ssf_scale_1', 'blocks.9.attn.ssf_scale_2', 'blocks.10.mlp.ssf_scale_1', 'blocks.0.attn.ssf_shift_2', 'blocks.1.attn.ssf_shift_2', 'blocks.2.mlp.ssf_shift_1', 'blocks.5.attn.ssf_shift_2', 'blocks.9.ssf_shift_1', 'blocks.1.ssf_scale_2', 'blocks.3.attn.ssf_scale_1', 'blocks.5.ssf_scale_2', 'blocks.7.mlp.ssf_scale_2', 'blocks.11.mlp.ssf_scale_2', 'blocks.3.mlp.ssf_shift_2', 'blocks.6.ssf_shift_2', 'blocks.8.attn.ssf_shift_1', 'blocks.10.ssf_shift_2', 'blocks.1.mlp.ssf_scale_1', 'blocks.4.attn.ssf_scale_2', 'blocks.5.mlp.ssf_scale_1', 'blocks.8.ssf_scale_1', 'blocks.0.ssf_shift_1', 'blocks.4.ssf_shift_1', 'blocks.6.mlp.ssf_shift_1', 'blocks.9.attn.ssf_shift_2', 'blocks.10.mlp.ssf_shift_1', 'blocks.2.mlp.ssf_scale_2', 'blocks.7.attn.ssf_scale_1', 'blocks.9.ssf_scale_2', 'blocks.11.attn.ssf_scale_1', 'blocks.1.ssf_shift_2', 'blocks.3.attn.ssf_shift_1', 'blocks.5.ssf_shift_2', 'blocks.7.mlp.ssf_shift_2', 'blocks.11.mlp.ssf_shift_2', 'blocks.3.ssf_scale_1', 'blocks.8.attn.ssf_scale_2', 'blocks.9.mlp.ssf_scale_1', 'blocks.5.mlp.ssf_shift_1', 'blocks.1.mlp.ssf_shift_1', 'blocks.4.attn.ssf_shift_2', 'blocks.8.ssf_shift_1', 'blocks.0.ssf_scale_2', 'blocks.2.attn.ssf_scale_1', 'blocks.4.ssf_scale_2', 'blocks.6.attn.ssf_scale_1', 'blocks.6.mlp.ssf_scale_2', 'blocks.10.mlp.ssf_scale_2', 'blocks.2.mlp.ssf_shift_2', 'blocks.7.attn.ssf_shift_1', 'blocks.9.ssf_shift_2', 'blocks.11.attn.ssf_shift_1', 'blocks.4.mlp.ssf_scale_1', 'blocks.0.mlp.ssf_scale_1', 'blocks.3.attn.ssf_scale_2', 'blocks.7.ssf_scale_1', 'blocks.11.ssf_scale_1'].
+ Torch-Pruning will prune the last non-singleton dimension of a parameter. If you wish to customize this behavior, please provide an unwrapped_parameters argument.
+  warnings.warn("Unwrapped parameters detected: {}.\n Torch-Pruning will prune the last non-singleton dimension of a parameter. If you wish to customize this behavior, please provide an unwrapped_parameters argument.".format([_param_to_name[p] for p in unwrapped_detected]))
+Params: 86.0814 M
+ops: 16.8553 G
+ssf_scale_1
+ssf_shift_1
+patch_embed.ssf_scale_1
+patch_embed.ssf_shift_1
+blocks.0.ssf_scale_1
+blocks.0.ssf_shift_1
+blocks.0.ssf_scale_2
+blocks.0.ssf_shift_2
+blocks.0.attn.ssf_scale_1
+blocks.0.attn.ssf_shift_1
+blocks.0.attn.ssf_scale_2
+blocks.0.attn.ssf_shift_2
+blocks.0.mlp.ssf_scale_1
+blocks.0.mlp.ssf_shift_1
+blocks.0.mlp.ssf_scale_2
+blocks.0.mlp.ssf_shift_2
+blocks.1.ssf_scale_1
+blocks.1.ssf_shift_1
+blocks.1.ssf_scale_2
+blocks.1.ssf_shift_2
+blocks.1.attn.ssf_scale_1
+blocks.1.attn.ssf_shift_1
+blocks.1.attn.ssf_scale_2
+blocks.1.attn.ssf_shift_2
+blocks.1.mlp.ssf_scale_1
+blocks.1.mlp.ssf_shift_1
+blocks.1.mlp.ssf_scale_2
+blocks.1.mlp.ssf_shift_2
+blocks.2.ssf_scale_1
+blocks.2.ssf_shift_1
+blocks.2.ssf_scale_2
+blocks.2.ssf_shift_2
+blocks.2.attn.ssf_scale_1
+blocks.2.attn.ssf_shift_1
+blocks.2.attn.ssf_scale_2
+blocks.2.attn.ssf_shift_2
+blocks.2.mlp.ssf_scale_1
+blocks.2.mlp.ssf_shift_1
+blocks.2.mlp.ssf_scale_2
+blocks.2.mlp.ssf_shift_2
+blocks.3.ssf_scale_1
+blocks.3.ssf_shift_1
+blocks.3.ssf_scale_2
+blocks.3.ssf_shift_2
+blocks.3.attn.ssf_scale_1
+blocks.3.attn.ssf_shift_1
+blocks.3.attn.ssf_scale_2
+blocks.3.attn.ssf_shift_2
+blocks.3.mlp.ssf_scale_1
+blocks.3.mlp.ssf_shift_1
+blocks.3.mlp.ssf_scale_2
+blocks.3.mlp.ssf_shift_2
+blocks.4.ssf_scale_1
+blocks.4.ssf_shift_1
+blocks.4.ssf_scale_2
+blocks.4.ssf_shift_2
+blocks.4.attn.ssf_scale_1
+blocks.4.attn.ssf_shift_1
+blocks.4.attn.ssf_scale_2
+blocks.4.attn.ssf_shift_2
+blocks.4.mlp.ssf_scale_1
+blocks.4.mlp.ssf_shift_1
+blocks.4.mlp.ssf_scale_2
+blocks.4.mlp.ssf_shift_2
+blocks.5.ssf_scale_1
+blocks.5.ssf_shift_1
+blocks.5.ssf_scale_2
+blocks.5.ssf_shift_2
+blocks.5.attn.ssf_scale_1
+blocks.5.attn.ssf_shift_1
+blocks.5.attn.ssf_scale_2
+blocks.5.attn.ssf_shift_2
+blocks.5.mlp.ssf_scale_1
+blocks.5.mlp.ssf_shift_1
+blocks.5.mlp.ssf_scale_2
+blocks.5.mlp.ssf_shift_2
+blocks.6.ssf_scale_1
+blocks.6.ssf_shift_1
+blocks.6.ssf_scale_2
+blocks.6.ssf_shift_2
+blocks.6.attn.ssf_scale_1
+blocks.6.attn.ssf_shift_1
+blocks.6.attn.ssf_scale_2
+blocks.6.attn.ssf_shift_2
+blocks.6.mlp.ssf_scale_1
+blocks.6.mlp.ssf_shift_1
+blocks.6.mlp.ssf_scale_2
+blocks.6.mlp.ssf_shift_2
+blocks.7.ssf_scale_1
+blocks.7.ssf_shift_1
+blocks.7.ssf_scale_2
+blocks.7.ssf_shift_2
+blocks.7.attn.ssf_scale_1
+blocks.7.attn.ssf_shift_1
+blocks.7.attn.ssf_scale_2
+blocks.7.attn.ssf_shift_2
+blocks.7.mlp.ssf_scale_1
+blocks.7.mlp.ssf_shift_1
+blocks.7.mlp.ssf_scale_2
+blocks.7.mlp.ssf_shift_2
+blocks.8.ssf_scale_1
+blocks.8.ssf_shift_1
+blocks.8.ssf_scale_2
+blocks.8.ssf_shift_2
+blocks.8.attn.ssf_scale_1
+blocks.8.attn.ssf_shift_1
+blocks.8.attn.ssf_scale_2
+blocks.8.attn.ssf_shift_2
+blocks.8.mlp.ssf_scale_1
+blocks.8.mlp.ssf_shift_1
+blocks.8.mlp.ssf_scale_2
+blocks.8.mlp.ssf_shift_2
+blocks.9.ssf_scale_1
+blocks.9.ssf_shift_1
+blocks.9.ssf_scale_2
+blocks.9.ssf_shift_2
+blocks.9.attn.ssf_scale_1
+blocks.9.attn.ssf_shift_1
+blocks.9.attn.ssf_scale_2
+blocks.9.attn.ssf_shift_2
+blocks.9.mlp.ssf_scale_1
+blocks.9.mlp.ssf_shift_1
+blocks.9.mlp.ssf_scale_2
+blocks.9.mlp.ssf_shift_2
+blocks.10.ssf_scale_1
+blocks.10.ssf_shift_1
+blocks.10.ssf_scale_2
+blocks.10.ssf_shift_2
+blocks.10.attn.ssf_scale_1
+blocks.10.attn.ssf_shift_1
+blocks.10.attn.ssf_scale_2
+blocks.10.attn.ssf_shift_2
+blocks.10.mlp.ssf_scale_1
+blocks.10.mlp.ssf_shift_1
+blocks.10.mlp.ssf_scale_2
+blocks.10.mlp.ssf_shift_2
+blocks.11.ssf_scale_1
+blocks.11.ssf_shift_1
+blocks.11.ssf_scale_2
+blocks.11.ssf_shift_2
+blocks.11.attn.ssf_scale_1
+blocks.11.attn.ssf_shift_1
+blocks.11.attn.ssf_scale_2
+blocks.11.attn.ssf_shift_2
+blocks.11.mlp.ssf_scale_1
+blocks.11.mlp.ssf_shift_1
+blocks.11.mlp.ssf_scale_2
+blocks.11.mlp.ssf_shift_2
+head.weight
+head.bias
+freezing parameters finished!
+Model vit_base_patch16_224_in21k created, param count:86081380
+number of params for requires grad: 282724
+Using native Torch AMP. Training in mixed precision.
+Scheduled epochs: 11
+0
+Train: 0 [   0/195 (  0%)]  Loss: 5.640 (5.64)  Time: 3.647s,   70.20/s  (3.647s,   70.20/s)  LR: 1.000e-03  Data: 0.976 (0.976)
+Train: 0 [ 100/195 ( 52%)]  Loss: 3.039 (3.69)  Time: 0.510s,  502.13/s  (0.540s,  474.06/s)  LR: 1.000e-03  Data: 0.015 (0.025)
+Train: 0 [ 194/195 (100%)]  Loss: 2.574 (3.30)  Time: 0.501s,  510.76/s  (0.527s,  485.82/s)  LR: 1.000e-03  Data: 0.000 (0.021)
+1
+Train: 1 [   0/195 (  0%)]  Loss: 2.162 (2.16)  Time: 1.229s,  208.26/s  (1.229s,  208.26/s)  LR: 1.000e-03  Data: 0.732 (0.732)
+Train: 1 [ 100/195 ( 52%)]  Loss: 2.995 (2.80)  Time: 0.519s,  492.95/s  (0.524s,  488.60/s)  LR: 1.000e-03  Data: 0.016 (0.023)
+Train: 1 [ 194/195 (100%)]  Loss: 2.658 (2.79)  Time: 0.506s,  505.56/s  (0.522s,  490.70/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+2
+Train: 2 [   0/195 (  0%)]  Loss: 2.275 (2.27)  Time: 1.253s,  204.28/s  (1.253s,  204.28/s)  LR: 1.000e-03  Data: 0.751 (0.751)
+Train: 2 [ 100/195 ( 52%)]  Loss: 2.772 (2.61)  Time: 0.523s,  489.94/s  (0.528s,  484.46/s)  LR: 1.000e-03  Data: 0.017 (0.023)
+Train: 2 [ 194/195 (100%)]  Loss: 2.453 (2.67)  Time: 0.507s,  505.07/s  (0.525s,  487.40/s)  LR: 1.000e-03  Data: 0.000 (0.020)
+3
+Train: 3 [   0/195 (  0%)]  Loss: 3.080 (3.08)  Time: 1.183s,  216.35/s  (1.183s,  216.35/s)  LR: 1.000e-03  Data: 0.676 (0.676)
+Train: 3 [ 100/195 ( 52%)]  Loss: 2.982 (2.78)  Time: 0.523s,  489.93/s  (0.528s,  484.65/s)  LR: 1.000e-03  Data: 0.016 (0.023)
+Train: 3 [ 194/195 (100%)]  Loss: 2.941 (2.77)  Time: 0.508s,  504.23/s  (0.525s,  487.25/s)  LR: 1.000e-03  Data: 0.000 (0.020)
+4
+Train: 4 [   0/195 (  0%)]  Loss: 3.016 (3.02)  Time: 1.338s,  191.27/s  (1.338s,  191.27/s)  LR: 1.000e-03  Data: 0.835 (0.835)
+Train: 4 [ 100/195 ( 52%)]  Loss: 3.028 (2.69)  Time: 0.524s,  488.58/s  (0.532s,  481.18/s)  LR: 1.000e-03  Data: 0.017 (0.025)
+Train: 4 [ 194/195 (100%)]  Loss: 3.114 (2.70)  Time: 0.509s,  502.51/s  (0.528s,  484.78/s)  LR: 1.000e-03  Data: 0.000 (0.021)
+5
+Train: 5 [   0/195 (  0%)]  Loss: 2.124 (2.12)  Time: 1.215s,  210.77/s  (1.215s,  210.77/s)  LR: 1.000e-03  Data: 0.709 (0.709)
+Train: 5 [ 100/195 ( 52%)]  Loss: 2.107 (2.62)  Time: 0.523s,  489.43/s  (0.530s,  483.26/s)  LR: 1.000e-03  Data: 0.016 (0.023)
+Train: 5 [ 194/195 (100%)]  Loss: 3.209 (2.65)  Time: 0.510s,  501.58/s  (0.527s,  486.09/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+6
+Train: 6 [   0/195 (  0%)]  Loss: 2.161 (2.16)  Time: 1.167s,  219.41/s  (1.167s,  219.41/s)  LR: 1.000e-03  Data: 0.661 (0.661)
+Train: 6 [ 100/195 ( 52%)]  Loss: 2.190 (2.71)  Time: 0.521s,  491.45/s  (0.530s,  483.26/s)  LR: 1.000e-03  Data: 0.015 (0.022)
+Train: 6 [ 194/195 (100%)]  Loss: 3.208 (2.67)  Time: 0.509s,  503.08/s  (0.526s,  486.46/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+7
+Train: 7 [   0/195 (  0%)]  Loss: 2.239 (2.24)  Time: 1.290s,  198.38/s  (1.290s,  198.38/s)  LR: 1.000e-03  Data: 0.781 (0.781)
+Train: 7 [ 100/195 ( 52%)]  Loss: 3.029 (2.77)  Time: 0.523s,  489.78/s  (0.530s,  483.02/s)  LR: 1.000e-03  Data: 0.015 (0.023)
+Train: 7 [ 194/195 (100%)]  Loss: 2.789 (2.73)  Time: 0.510s,  502.13/s  (0.526s,  486.41/s)  LR: 1.000e-03  Data: 0.000 (0.020)
+8
+Train: 8 [   0/195 (  0%)]  Loss: 2.070 (2.07)  Time: 1.339s,  191.16/s  (1.339s,  191.16/s)  LR: 1.000e-03  Data: 0.834 (0.834)
+Train: 8 [ 100/195 ( 52%)]  Loss: 2.390 (2.69)  Time: 0.524s,  488.97/s  (0.531s,  482.05/s)  LR: 1.000e-03  Data: 0.015 (0.024)
+Train: 8 [ 194/195 (100%)]  Loss: 2.594 (2.71)  Time: 0.508s,  504.19/s  (0.527s,  485.93/s)  LR: 1.000e-03  Data: 0.000 (0.020)
+9
+Train: 9 [   0/195 (  0%)]  Loss: 3.289 (3.29)  Time: 1.261s,  203.00/s  (1.261s,  203.00/s)  LR: 1.000e-03  Data: 0.754 (0.754)
+Train: 9 [ 100/195 ( 52%)]  Loss: 3.320 (2.75)  Time: 0.525s,  488.04/s  (0.530s,  483.05/s)  LR: 1.000e-03  Data: 0.018 (0.023)
+Train: 9 [ 194/195 (100%)]  Loss: 3.225 (2.81)  Time: 0.508s,  504.18/s  (0.526s,  486.41/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+10
+Train: 10 [   0/195 (  0%)]  Loss: 1.868 (1.87)  Time: 1.211s,  211.41/s  (1.211s,  211.41/s)  LR: 1.000e-03  Data: 0.705 (0.705)
+Train: 10 [ 100/195 ( 52%)]  Loss: 2.317 (2.76)  Time: 0.520s,  491.87/s  (0.530s,  483.46/s)  LR: 1.000e-03  Data: 0.014 (0.023)
+Train: 10 [ 194/195 (100%)]  Loss: 2.531 (2.81)  Time: 0.509s,  502.56/s  (0.526s,  486.72/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+11
+Train: 11 [   0/195 (  0%)]  Loss: 3.214 (3.21)  Time: 1.276s,  200.65/s  (1.276s,  200.65/s)  LR: 1.000e-03  Data: 0.771 (0.771)
+Train: 11 [ 100/195 ( 52%)]  Loss: 2.560 (2.82)  Time: 0.523s,  489.88/s  (0.530s,  482.95/s)  LR: 1.000e-03  Data: 0.015 (0.023)
+Train: 11 [ 194/195 (100%)]  Loss: 3.258 (2.84)  Time: 0.508s,  504.04/s  (0.527s,  486.10/s)  LR: 1.000e-03  Data: 0.000 (0.020)
+12
+Train: 12 [   0/195 (  0%)]  Loss: 3.434 (3.43)  Time: 1.220s,  209.79/s  (1.220s,  209.79/s)  LR: 1.000e-03  Data: 0.708 (0.708)
+Train: 12 [ 100/195 ( 52%)]  Loss: 1.918 (2.79)  Time: 0.523s,  489.51/s  (0.530s,  483.12/s)  LR: 1.000e-03  Data: 0.016 (0.023)
+Train: 12 [ 194/195 (100%)]  Loss: 3.131 (2.80)  Time: 0.510s,  502.12/s  (0.526s,  486.58/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+13
+Train: 13 [   0/195 (  0%)]  Loss: 2.280 (2.28)  Time: 1.223s,  209.33/s  (1.223s,  209.33/s)  LR: 1.000e-03  Data: 0.717 (0.717)
+Train: 13 [ 100/195 ( 52%)]  Loss: 2.264 (2.83)  Time: 0.523s,  489.09/s  (0.530s,  483.41/s)  LR: 1.000e-03  Data: 0.016 (0.023)
+Train: 13 [ 194/195 (100%)]  Loss: 3.312 (2.89)  Time: 0.508s,  503.52/s  (0.526s,  486.61/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+14
+Train: 14 [   0/195 (  0%)]  Loss: 2.704 (2.70)  Time: 1.296s,  197.54/s  (1.296s,  197.54/s)  LR: 1.000e-03  Data: 0.791 (0.791)
+Train: 14 [ 100/195 ( 52%)]  Loss: 3.274 (2.84)  Time: 0.522s,  489.97/s  (0.530s,  482.84/s)  LR: 1.000e-03  Data: 0.016 (0.023)
+Train: 14 [ 194/195 (100%)]  Loss: 2.444 (2.86)  Time: 0.510s,  501.96/s  (0.527s,  486.21/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+15
+Train: 15 [   0/195 (  0%)]  Loss: 2.477 (2.48)  Time: 1.208s,  211.91/s  (1.208s,  211.91/s)  LR: 1.000e-03  Data: 0.702 (0.702)
+Train: 15 [ 100/195 ( 52%)]  Loss: 3.009 (2.81)  Time: 0.522s,  490.39/s  (0.529s,  484.13/s)  LR: 1.000e-03  Data: 0.015 (0.022)
+Train: 15 [ 194/195 (100%)]  Loss: 3.097 (2.83)  Time: 0.508s,  503.84/s  (0.526s,  486.98/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+16
+Train: 16 [   0/195 (  0%)]  Loss: 3.472 (3.47)  Time: 1.284s,  199.31/s  (1.284s,  199.31/s)  LR: 1.000e-03  Data: 0.780 (0.780)
+Train: 16 [ 100/195 ( 52%)]  Loss: 2.295 (2.89)  Time: 0.522s,  490.45/s  (0.530s,  483.25/s)  LR: 1.000e-03  Data: 0.015 (0.023)
+Train: 16 [ 194/195 (100%)]  Loss: 3.093 (2.90)  Time: 0.511s,  500.95/s  (0.526s,  486.64/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+17
+Train: 17 [   0/195 (  0%)]  Loss: 3.232 (3.23)  Time: 1.175s,  217.86/s  (1.175s,  217.86/s)  LR: 1.000e-03  Data: 0.669 (0.669)
+Train: 17 [ 100/195 ( 52%)]  Loss: 2.314 (2.91)  Time: 0.523s,  489.43/s  (0.529s,  483.81/s)  LR: 1.000e-03  Data: 0.016 (0.022)
+Train: 17 [ 194/195 (100%)]  Loss: 3.130 (2.90)  Time: 0.509s,  503.21/s  (0.526s,  486.96/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+18
+Train: 18 [   0/195 (  0%)]  Loss: 3.201 (3.20)  Time: 1.239s,  206.68/s  (1.239s,  206.68/s)  LR: 1.000e-03  Data: 0.730 (0.730)
+Train: 18 [ 100/195 ( 52%)]  Loss: 2.598 (2.95)  Time: 0.524s,  488.14/s  (0.529s,  483.63/s)  LR: 1.000e-03  Data: 0.015 (0.023)
+Train: 18 [ 194/195 (100%)]  Loss: 2.587 (2.91)  Time: 0.511s,  501.06/s  (0.526s,  486.48/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+19
+Train: 19 [   0/195 (  0%)]  Loss: 1.978 (1.98)  Time: 1.149s,  222.81/s  (1.149s,  222.81/s)  LR: 1.000e-03  Data: 0.643 (0.643)
+Train: 19 [ 100/195 ( 52%)]  Loss: 2.693 (2.93)  Time: 0.522s,  490.53/s  (0.528s,  484.88/s)  LR: 1.000e-03  Data: 0.015 (0.022)
+Train: 19 [ 194/195 (100%)]  Loss: 3.109 (2.90)  Time: 0.507s,  505.03/s  (0.525s,  487.34/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+20
+Train: 20 [   0/195 (  0%)]  Loss: 3.218 (3.22)  Time: 1.151s,  222.45/s  (1.151s,  222.45/s)  LR: 1.000e-03  Data: 0.647 (0.647)
+Train: 20 [ 100/195 ( 52%)]  Loss: 2.254 (2.89)  Time: 0.522s,  490.11/s  (0.528s,  484.47/s)  LR: 1.000e-03  Data: 0.016 (0.022)
+Train: 20 [ 194/195 (100%)]  Loss: 3.370 (2.89)  Time: 0.508s,  503.85/s  (0.525s,  487.29/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+21
+Train: 21 [   0/195 (  0%)]  Loss: 3.293 (3.29)  Time: 1.296s,  197.55/s  (1.296s,  197.55/s)  LR: 1.000e-03  Data: 0.791 (0.791)
+Train: 21 [ 100/195 ( 52%)]  Loss: 2.743 (2.89)  Time: 0.522s,  490.79/s  (0.531s,  482.56/s)  LR: 1.000e-03  Data: 0.014 (0.023)
+Train: 21 [ 194/195 (100%)]  Loss: 2.074 (2.91)  Time: 0.510s,  501.56/s  (0.527s,  486.23/s)  LR: 1.000e-03  Data: 0.000 (0.020)
+22
+Train: 22 [   0/195 (  0%)]  Loss: 3.345 (3.35)  Time: 1.260s,  203.16/s  (1.260s,  203.16/s)  LR: 1.000e-03  Data: 0.754 (0.754)
+Train: 22 [ 100/195 ( 52%)]  Loss: 2.753 (3.01)  Time: 0.523s,  489.80/s  (0.530s,  483.13/s)  LR: 1.000e-03  Data: 0.016 (0.023)
+Train: 22 [ 194/195 (100%)]  Loss: 3.465 (2.98)  Time: 0.508s,  504.04/s  (0.526s,  486.38/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+23
+Train: 23 [   0/195 (  0%)]  Loss: 3.354 (3.35)  Time: 1.219s,  210.07/s  (1.219s,  210.07/s)  LR: 1.000e-03  Data: 0.713 (0.713)
+Train: 23 [ 100/195 ( 52%)]  Loss: 2.366 (2.97)  Time: 0.523s,  489.29/s  (0.529s,  484.03/s)  LR: 1.000e-03  Data: 0.016 (0.022)
+Train: 23 [ 194/195 (100%)]  Loss: 2.886 (2.96)  Time: 0.508s,  504.09/s  (0.526s,  487.05/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+24
+Train: 24 [   0/195 (  0%)]  Loss: 3.526 (3.53)  Time: 1.223s,  209.26/s  (1.223s,  209.26/s)  LR: 1.000e-03  Data: 0.718 (0.718)
+Train: 24 [ 100/195 ( 52%)]  Loss: 2.649 (3.02)  Time: 0.522s,  490.79/s  (0.529s,  483.94/s)  LR: 1.000e-03  Data: 0.016 (0.022)
+Train: 24 [ 194/195 (100%)]  Loss: 3.326 (3.05)  Time: 0.509s,  502.74/s  (0.526s,  487.11/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+25
+Train: 25 [   0/195 (  0%)]  Loss: 2.337 (2.34)  Time: 1.263s,  202.68/s  (1.263s,  202.68/s)  LR: 1.000e-03  Data: 0.757 (0.757)
+Train: 25 [ 100/195 ( 52%)]  Loss: 2.490 (2.93)  Time: 0.522s,  490.07/s  (0.530s,  483.22/s)  LR: 1.000e-03  Data: 0.016 (0.023)
+Train: 25 [ 194/195 (100%)]  Loss: 3.369 (2.98)  Time: 0.509s,  503.31/s  (0.526s,  486.58/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+26
+Train: 26 [   0/195 (  0%)]  Loss: 3.484 (3.48)  Time: 1.166s,  219.63/s  (1.166s,  219.63/s)  LR: 1.000e-03  Data: 0.659 (0.659)
+Train: 26 [ 100/195 ( 52%)]  Loss: 3.505 (3.07)  Time: 0.522s,  490.64/s  (0.529s,  483.86/s)  LR: 1.000e-03  Data: 0.016 (0.022)
+Train: 26 [ 194/195 (100%)]  Loss: 3.323 (3.06)  Time: 0.508s,  503.83/s  (0.525s,  487.17/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+27
+Train: 27 [   0/195 (  0%)]  Loss: 3.150 (3.15)  Time: 1.181s,  216.77/s  (1.181s,  216.77/s)  LR: 1.000e-03  Data: 0.675 (0.675)
+Train: 27 [ 100/195 ( 52%)]  Loss: 3.441 (2.96)  Time: 0.522s,  490.39/s  (0.528s,  484.81/s)  LR: 1.000e-03  Data: 0.015 (0.022)
+Train: 27 [ 194/195 (100%)]  Loss: 2.777 (2.94)  Time: 0.509s,  502.96/s  (0.525s,  487.53/s)  LR: 1.000e-03  Data: 0.000 (0.018)
+28
+Train: 28 [   0/195 (  0%)]  Loss: 2.740 (2.74)  Time: 1.236s,  207.17/s  (1.236s,  207.17/s)  LR: 1.000e-03  Data: 0.727 (0.727)
+Train: 28 [ 100/195 ( 52%)]  Loss: 3.453 (3.04)  Time: 0.522s,  490.62/s  (0.529s,  483.66/s)  LR: 1.000e-03  Data: 0.015 (0.022)
+Train: 28 [ 194/195 (100%)]  Loss: 2.436 (3.02)  Time: 0.510s,  502.41/s  (0.526s,  486.68/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+29
+Train: 29 [   0/195 (  0%)]  Loss: 2.120 (2.12)  Time: 1.246s,  205.38/s  (1.246s,  205.38/s)  LR: 1.000e-03  Data: 0.742 (0.742)
+Train: 29 [ 100/195 ( 52%)]  Loss: 3.516 (3.10)  Time: 0.523s,  489.70/s  (0.530s,  483.41/s)  LR: 1.000e-03  Data: 0.015 (0.023)
+Train: 29 [ 194/195 (100%)]  Loss: 3.328 (3.08)  Time: 0.509s,  502.99/s  (0.526s,  486.91/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+30
+Train: 30 [   0/195 (  0%)]  Loss: 2.155 (2.15)  Time: 1.340s,  190.99/s  (1.340s,  190.99/s)  LR: 1.000e-03  Data: 0.836 (0.836)
+Train: 30 [ 100/195 ( 52%)]  Loss: 3.670 (3.11)  Time: 0.521s,  491.16/s  (0.530s,  482.83/s)  LR: 1.000e-03  Data: 0.014 (0.023)
+Train: 30 [ 194/195 (100%)]  Loss: 3.552 (3.09)  Time: 0.509s,  502.52/s  (0.526s,  486.67/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+31
+Train: 31 [   0/195 (  0%)]  Loss: 2.828 (2.83)  Time: 1.250s,  204.84/s  (1.250s,  204.84/s)  LR: 1.000e-03  Data: 0.743 (0.743)
+Train: 31 [ 100/195 ( 52%)]  Loss: 3.127 (3.05)  Time: 0.521s,  491.08/s  (0.530s,  483.25/s)  LR: 1.000e-03  Data: 0.015 (0.023)
+Train: 31 [ 194/195 (100%)]  Loss: 3.215 (3.07)  Time: 0.508s,  504.37/s  (0.526s,  486.39/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+32
+Train: 32 [   0/195 (  0%)]  Loss: 2.143 (2.14)  Time: 1.291s,  198.28/s  (1.291s,  198.28/s)  LR: 1.000e-03  Data: 0.786 (0.786)
+Train: 32 [ 100/195 ( 52%)]  Loss: 3.586 (3.10)  Time: 0.522s,  490.65/s  (0.530s,  483.47/s)  LR: 1.000e-03  Data: 0.015 (0.023)
+Train: 32 [ 194/195 (100%)]  Loss: 2.543 (3.13)  Time: 0.508s,  504.31/s  (0.526s,  486.93/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+33
+Train: 33 [   0/195 (  0%)]  Loss: 2.833 (2.83)  Time: 1.196s,  213.99/s  (1.196s,  213.99/s)  LR: 1.000e-03  Data: 0.691 (0.691)
+Train: 33 [ 100/195 ( 52%)]  Loss: 2.816 (3.01)  Time: 0.521s,  490.94/s  (0.528s,  484.58/s)  LR: 1.000e-03  Data: 0.015 (0.022)
+Train: 33 [ 194/195 (100%)]  Loss: 3.297 (3.09)  Time: 0.508s,  503.55/s  (0.525s,  487.50/s)  LR: 1.000e-03  Data: 0.000 (0.018)
+34
+Train: 34 [   0/195 (  0%)]  Loss: 2.518 (2.52)  Time: 1.136s,  225.35/s  (1.136s,  225.35/s)  LR: 1.000e-03  Data: 0.630 (0.630)
+Train: 34 [ 100/195 ( 52%)]  Loss: 2.579 (3.16)  Time: 0.525s,  487.78/s  (0.528s,  484.94/s)  LR: 1.000e-03  Data: 0.017 (0.022)
+Train: 34 [ 194/195 (100%)]  Loss: 3.407 (3.15)  Time: 0.508s,  504.36/s  (0.525s,  487.41/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+35
+Train: 35 [   0/195 (  0%)]  Loss: 2.732 (2.73)  Time: 1.177s,  217.52/s  (1.177s,  217.52/s)  LR: 1.000e-03  Data: 0.672 (0.672)
+Train: 35 [ 100/195 ( 52%)]  Loss: 3.531 (3.17)  Time: 0.522s,  490.12/s  (0.528s,  484.57/s)  LR: 1.000e-03  Data: 0.016 (0.022)
+Train: 35 [ 194/195 (100%)]  Loss: 3.553 (3.14)  Time: 0.507s,  504.91/s  (0.525s,  487.29/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+36
+Train: 36 [   0/195 (  0%)]  Loss: 2.233 (2.23)  Time: 1.207s,  212.12/s  (1.207s,  212.12/s)  LR: 1.000e-03  Data: 0.703 (0.703)
+Train: 36 [ 100/195 ( 52%)]  Loss: 3.255 (3.15)  Time: 0.522s,  490.83/s  (0.529s,  484.11/s)  LR: 1.000e-03  Data: 0.015 (0.022)
+Train: 36 [ 194/195 (100%)]  Loss: 3.159 (3.14)  Time: 0.509s,  503.11/s  (0.525s,  487.55/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+37
+Train: 37 [   0/195 (  0%)]  Loss: 3.689 (3.69)  Time: 1.263s,  202.72/s  (1.263s,  202.72/s)  LR: 1.000e-03  Data: 0.757 (0.757)
+Train: 37 [ 100/195 ( 52%)]  Loss: 3.395 (3.14)  Time: 0.521s,  491.07/s  (0.530s,  483.37/s)  LR: 1.000e-03  Data: 0.015 (0.023)
+Train: 37 [ 194/195 (100%)]  Loss: 3.166 (3.11)  Time: 0.508s,  503.99/s  (0.526s,  486.82/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+38
+Train: 38 [   0/195 (  0%)]  Loss: 2.317 (2.32)  Time: 1.227s,  208.63/s  (1.227s,  208.63/s)  LR: 1.000e-03  Data: 0.718 (0.718)
+Train: 38 [ 100/195 ( 52%)]  Loss: 3.758 (3.20)  Time: 0.525s,  487.58/s  (0.530s,  483.39/s)  LR: 1.000e-03  Data: 0.015 (0.022)
+Train: 38 [ 194/195 (100%)]  Loss: 3.510 (3.16)  Time: 0.510s,  501.69/s  (0.526s,  487.07/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+39
+Train: 39 [   0/195 (  0%)]  Loss: 3.351 (3.35)  Time: 1.146s,  223.35/s  (1.146s,  223.35/s)  LR: 1.000e-03  Data: 0.640 (0.640)
+Train: 39 [ 100/195 ( 52%)]  Loss: 2.461 (3.13)  Time: 0.522s,  490.41/s  (0.529s,  484.21/s)  LR: 1.000e-03  Data: 0.016 (0.022)
+Train: 39 [ 194/195 (100%)]  Loss: 3.667 (3.14)  Time: 0.508s,  503.49/s  (0.526s,  487.05/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+40
+Train: 40 [   0/195 (  0%)]  Loss: 3.595 (3.60)  Time: 1.226s,  208.75/s  (1.226s,  208.75/s)  LR: 1.000e-03  Data: 0.721 (0.721)
+Train: 40 [ 100/195 ( 52%)]  Loss: 3.153 (3.18)  Time: 0.522s,  490.71/s  (0.529s,  483.57/s)  LR: 1.000e-03  Data: 0.016 (0.022)
+Train: 40 [ 194/195 (100%)]  Loss: 3.754 (3.20)  Time: 0.507s,  504.96/s  (0.526s,  487.01/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+41
+Train: 41 [   0/195 (  0%)]  Loss: 2.744 (2.74)  Time: 1.236s,  207.07/s  (1.236s,  207.07/s)  LR: 1.000e-03  Data: 0.730 (0.730)
+Train: 41 [ 100/195 ( 52%)]  Loss: 2.825 (3.19)  Time: 0.522s,  490.04/s  (0.530s,  483.28/s)  LR: 1.000e-03  Data: 0.016 (0.023)
+Train: 41 [ 194/195 (100%)]  Loss: 2.707 (3.20)  Time: 0.506s,  505.74/s  (0.526s,  486.99/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+42
+Train: 42 [   0/195 (  0%)]  Loss: 2.559 (2.56)  Time: 1.207s,  212.08/s  (1.207s,  212.08/s)  LR: 1.000e-03  Data: 0.703 (0.703)
+Train: 42 [ 100/195 ( 52%)]  Loss: 3.424 (3.10)  Time: 0.521s,  491.53/s  (0.529s,  484.33/s)  LR: 1.000e-03  Data: 0.015 (0.022)
+Train: 42 [ 194/195 (100%)]  Loss: 3.241 (3.15)  Time: 0.508s,  503.56/s  (0.525s,  487.41/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+43
+Train: 43 [   0/195 (  0%)]  Loss: 2.701 (2.70)  Time: 1.242s,  206.12/s  (1.242s,  206.12/s)  LR: 1.000e-03  Data: 0.737 (0.737)
+Train: 43 [ 100/195 ( 52%)]  Loss: 3.035 (3.15)  Time: 0.522s,  490.44/s  (0.529s,  483.65/s)  LR: 1.000e-03  Data: 0.015 (0.023)
+Train: 43 [ 194/195 (100%)]  Loss: 2.904 (3.17)  Time: 0.508s,  503.66/s  (0.526s,  487.05/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+44
+Train: 44 [   0/195 (  0%)]  Loss: 2.968 (2.97)  Time: 1.258s,  203.43/s  (1.258s,  203.43/s)  LR: 1.000e-03  Data: 0.752 (0.752)
+Train: 44 [ 100/195 ( 52%)]  Loss: 3.699 (3.17)  Time: 0.520s,  491.96/s  (0.529s,  483.53/s)  LR: 1.000e-03  Data: 0.015 (0.023)
+Train: 44 [ 194/195 (100%)]  Loss: 2.452 (3.19)  Time: 0.510s,  502.26/s  (0.526s,  486.78/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+45
+Train: 45 [   0/195 (  0%)]  Loss: 3.214 (3.21)  Time: 1.292s,  198.15/s  (1.292s,  198.15/s)  LR: 1.000e-03  Data: 0.786 (0.786)
+Train: 45 [ 100/195 ( 52%)]  Loss: 2.486 (3.33)  Time: 0.523s,  489.23/s  (0.529s,  484.04/s)  LR: 1.000e-03  Data: 0.016 (0.023)
+Train: 45 [ 194/195 (100%)]  Loss: 2.555 (3.30)  Time: 0.507s,  505.05/s  (0.525s,  487.18/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+46
+Train: 46 [   0/195 (  0%)]  Loss: 2.351 (2.35)  Time: 1.242s,  206.11/s  (1.242s,  206.11/s)  LR: 1.000e-03  Data: 0.738 (0.738)
+Train: 46 [ 100/195 ( 52%)]  Loss: 2.530 (3.19)  Time: 0.521s,  491.82/s  (0.529s,  483.48/s)  LR: 1.000e-03  Data: 0.015 (0.022)
+Train: 46 [ 194/195 (100%)]  Loss: 3.759 (3.21)  Time: 0.509s,  502.53/s  (0.526s,  486.88/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+47
+Train: 47 [   0/195 (  0%)]  Loss: 3.818 (3.82)  Time: 1.186s,  215.79/s  (1.186s,  215.79/s)  LR: 1.000e-03  Data: 0.681 (0.681)
+Train: 47 [ 100/195 ( 52%)]  Loss: 3.139 (3.18)  Time: 0.523s,  489.45/s  (0.530s,  483.16/s)  LR: 1.000e-03  Data: 0.014 (0.023)
+Train: 47 [ 194/195 (100%)]  Loss: 3.660 (3.19)  Time: 0.509s,  503.35/s  (0.526s,  487.03/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+48
+Train: 48 [   0/195 (  0%)]  Loss: 3.150 (3.15)  Time: 1.156s,  221.48/s  (1.156s,  221.48/s)  LR: 1.000e-03  Data: 0.650 (0.650)
+Train: 48 [ 100/195 ( 52%)]  Loss: 2.844 (3.24)  Time: 0.522s,  490.36/s  (0.529s,  484.36/s)  LR: 1.000e-03  Data: 0.016 (0.022)
+Train: 48 [ 194/195 (100%)]  Loss: 3.460 (3.27)  Time: 0.508s,  504.11/s  (0.525s,  487.51/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+49
+Train: 49 [   0/195 (  0%)]  Loss: 2.427 (2.43)  Time: 1.240s,  206.40/s  (1.240s,  206.40/s)  LR: 1.000e-03  Data: 0.732 (0.732)
+Train: 49 [ 100/195 ( 52%)]  Loss: 3.925 (3.17)  Time: 0.521s,  491.81/s  (0.529s,  484.21/s)  LR: 1.000e-03  Data: 0.015 (0.022)
+Train: 49 [ 194/195 (100%)]  Loss: 2.779 (3.21)  Time: 0.508s,  503.92/s  (0.526s,  486.87/s)  LR: 1.000e-03  Data: 0.000 (0.019)
+Test: [   0/39]  Time: 1.028 (1.028)  Loss:  4.6953 (4.6953)  Acc@1:  0.7812 ( 0.7812)  Acc@5:  4.6875 ( 4.6875)
+Test: [  39/39]  Time: 0.105 (0.232)  Loss:  4.8203 (4.7087)  Acc@1:  0.0000 ( 1.0000)  Acc@5:  6.2500 ( 5.0400)
+Test: [Whole Val]  Time: 9.273  Loss: 4.7087  Acc@1:  1.0000 Pruned: 54.26% 
+*** Pruned results: OrderedDict([('loss', 4.7087125), ('top1', 1.0), ('top5', 5.04), ('pruned', 0.5426092195273632)])
+Pruned: 50.00%
+Train: 50 [   0/195 (  0%)]  Loss: 4.701 (4.70)  Time: 1.256s,  203.89/s  (1.256s,  203.89/s)  LR: 1.000e-07  Data: 0.748 (0.748)
+Train: 50 [ 100/195 ( 52%)]  Loss: 4.718 (4.72)  Time: 0.517s,  495.05/s  (0.525s,  487.74/s)  LR: 1.000e-07  Data: 0.014 (0.023)
+Train: 50 [ 194/195 (100%)]  Loss: 4.676 (4.72)  Time: 0.503s,  508.88/s  (0.521s,  490.91/s)  LR: 1.000e-07  Data: 0.000 (0.019)
+Test: [   0/39]  Time: 0.618 (0.618)  Loss:  4.6953 (4.6953)  Acc@1:  0.7812 ( 0.7812)  Acc@5:  4.6875 ( 4.6875)
+Test: [  39/39]  Time: 0.017 (0.220)  Loss:  4.8164 (4.7072)  Acc@1:  0.0000 ( 1.0000)  Acc@5:  6.2500 ( 5.0500)
+Test: [Whole Val]  Time: 8.793  Loss: 4.7072  Acc@1:  1.0000 Pruned: 54.26% 
+Train: 51 [   0/195 (  0%)]  Loss: 4.711 (4.71)  Time: 1.179s,  217.13/s  (1.179s,  217.13/s)  LR: 1.000e-07  Data: 0.678 (0.678)
+Train: 51 [ 100/195 ( 52%)]  Loss: 4.734 (4.72)  Time: 0.524s,  488.22/s  (0.525s,  487.46/s)  LR: 1.000e-07  Data: 0.015 (0.022)
+Train: 51 [ 194/195 (100%)]  Loss: 4.691 (4.72)  Time: 0.503s,  508.97/s  (0.521s,  491.04/s)  LR: 1.000e-07  Data: 0.000 (0.019)
+Test: [   0/39]  Time: 0.617 (0.617)  Loss:  4.6953 (4.6953)  Acc@1:  0.7812 ( 0.7812)  Acc@5:  4.6875 ( 4.6875)
+Test: [  39/39]  Time: 0.017 (0.221)  Loss:  4.8125 (4.7055)  Acc@1:  0.0000 ( 1.0000)  Acc@5:  6.2500 ( 5.0500)
+Test: [Whole Val]  Time: 8.839  Loss: 4.7055  Acc@1:  1.0000 Pruned: 54.26% 
+Train: 52 [   0/195 (  0%)]  Loss: 4.759 (4.76)  Time: 1.302s,  196.66/s  (1.302s,  196.66/s)  LR: 1.000e-07  Data: 0.793 (0.793)
+Train: 52 [ 100/195 ( 52%)]  Loss: 4.723 (4.72)  Time: 0.517s,  495.45/s  (0.526s,  486.97/s)  LR: 1.000e-07  Data: 0.015 (0.023)
+Train: 52 [ 194/195 (100%)]  Loss: 4.694 (4.72)  Time: 0.504s,  507.83/s  (0.522s,  490.27/s)  LR: 1.000e-07  Data: 0.000 (0.019)
+Test: [   0/39]  Time: 0.612 (0.612)  Loss:  4.6914 (4.6914)  Acc@1:  0.7812 ( 0.7812)  Acc@5:  4.6875 ( 4.6875)
+Test: [  39/39]  Time: 0.017 (0.220)  Loss:  4.8125 (4.7045)  Acc@1:  0.0000 ( 1.0000)  Acc@5:  6.2500 ( 5.0400)
+Test: [Whole Val]  Time: 8.819  Loss: 4.7045  Acc@1:  1.0000 Pruned: 54.26% 
+Train: 53 [   0/195 (  0%)]  Loss: 4.721 (4.72)  Time: 1.325s,  193.25/s  (1.325s,  193.25/s)  LR: 1.000e-07  Data: 0.824 (0.824)
+Train: 53 [ 100/195 ( 52%)]  Loss: 4.733 (4.72)  Time: 0.516s,  495.85/s  (0.526s,  486.37/s)  LR: 1.000e-07  Data: 0.015 (0.024)
+Train: 53 [ 194/195 (100%)]  Loss: 4.702 (4.72)  Time: 0.502s,  510.08/s  (0.522s,  490.33/s)  LR: 1.000e-07  Data: 0.000 (0.020)
+Test: [   0/39]  Time: 0.602 (0.602)  Loss:  4.6914 (4.6914)  Acc@1:  0.7812 ( 0.7812)  Acc@5:  4.6875 ( 4.6875)
+Test: [  39/39]  Time: 0.016 (0.219)  Loss:  4.8125 (4.7030)  Acc@1:  0.0000 ( 1.0000)  Acc@5:  6.2500 ( 5.0400)
+Test: [Whole Val]  Time: 8.764  Loss: 4.7030  Acc@1:  1.0000 Pruned: 54.26% 
+Train: 54 [   0/195 (  0%)]  Loss: 4.726 (4.73)  Time: 1.246s,  205.46/s  (1.246s,  205.46/s)  LR: 1.000e-07  Data: 0.746 (0.746)
+Train: 54 [ 100/195 ( 52%)]  Loss: 4.710 (4.72)  Time: 0.521s,  491.29/s  (0.525s,  488.05/s)  LR: 1.000e-07  Data: 0.019 (0.023)
+Train: 54 [ 194/195 (100%)]  Loss: 4.739 (4.72)  Time: 0.503s,  508.94/s  (0.521s,  491.41/s)  LR: 1.000e-07  Data: 0.000 (0.019)
+Test: [   0/39]  Time: 0.615 (0.615)  Loss:  4.6914 (4.6914)  Acc@1:  0.7812 ( 0.7812)  Acc@5:  4.6875 ( 4.6875)
+Test: [  39/39]  Time: 0.016 (0.220)  Loss:  4.8086 (4.7020)  Acc@1:  0.0000 ( 1.0000)  Acc@5:  6.2500 ( 5.0400)
+Test: [Whole Val]  Time: 8.787  Loss: 4.7020  Acc@1:  1.0000 Pruned: 54.26% 
+Train: 55 [   0/195 (  0%)]  Loss: 4.704 (4.70)  Time: 1.205s,  212.50/s  (1.205s,  212.50/s)  LR: 1.000e-07  Data: 0.701 (0.701)
+Train: 55 [ 100/195 ( 52%)]  Loss: 4.679 (4.72)  Time: 0.518s,  494.27/s  (0.524s,  488.96/s)  LR: 1.000e-07  Data: 0.016 (0.022)
+Train: 55 [ 194/195 (100%)]  Loss: 4.662 (4.71)  Time: 0.503s,  508.48/s  (0.520s,  491.94/s)  LR: 1.000e-07  Data: 0.000 (0.019)
+Test: [   0/39]  Time: 0.607 (0.607)  Loss:  4.6875 (4.6875)  Acc@1:  0.7812 ( 0.7812)  Acc@5:  4.6875 ( 4.6875)
+Test: [  39/39]  Time: 0.016 (0.219)  Loss:  4.8086 (4.7011)  Acc@1:  0.0000 ( 1.0000)  Acc@5:  6.2500 ( 5.0500)
+Test: [Whole Val]  Time: 8.773  Loss: 4.7011  Acc@1:  1.0000 Pruned: 54.26% 
+Train: 56 [   0/195 (  0%)]  Loss: 4.730 (4.73)  Time: 1.226s,  208.83/s  (1.226s,  208.83/s)  LR: 1.000e-07  Data: 0.726 (0.726)
+Train: 56 [ 100/195 ( 52%)]  Loss: 4.692 (4.71)  Time: 0.515s,  497.05/s  (0.524s,  488.92/s)  LR: 1.000e-07  Data: 0.015 (0.022)
+Train: 56 [ 194/195 (100%)]  Loss: 4.675 (4.71)  Time: 0.503s,  508.80/s  (0.520s,  491.96/s)  LR: 1.000e-07  Data: 0.000 (0.019)
+Test: [   0/39]  Time: 0.584 (0.584)  Loss:  4.6875 (4.6875)  Acc@1:  0.7812 ( 0.7812)  Acc@5:  4.6875 ( 4.6875)
+Test: [  39/39]  Time: 0.016 (0.219)  Loss:  4.8047 (4.7000)  Acc@1:  0.0000 ( 1.0000)  Acc@5:  6.2500 ( 5.0500)
+Test: [Whole Val]  Time: 8.762  Loss: 4.7000  Acc@1:  1.0000 Pruned: 54.26% 
+Train: 57 [   0/195 (  0%)]  Loss: 4.710 (4.71)  Time: 1.225s,  208.95/s  (1.225s,  208.95/s)  LR: 1.000e-07  Data: 0.726 (0.726)
+Train: 57 [ 100/195 ( 52%)]  Loss: 4.701 (4.71)  Time: 0.516s,  496.09/s  (0.524s,  489.00/s)  LR: 1.000e-07  Data: 0.014 (0.023)
+Train: 57 [ 194/195 (100%)]  Loss: 4.741 (4.71)  Time: 0.501s,  510.91/s  (0.520s,  492.00/s)  LR: 1.000e-07  Data: 0.000 (0.019)
+Test: [   0/39]  Time: 0.588 (0.588)  Loss:  4.6875 (4.6875)  Acc@1:  0.7812 ( 0.7812)  Acc@5:  4.6875 ( 4.6875)
+Test: [  39/39]  Time: 0.016 (0.218)  Loss:  4.8047 (4.6984)  Acc@1:  0.0000 ( 1.0000)  Acc@5:  6.2500 ( 5.0600)
+Test: [Whole Val]  Time: 8.730  Loss: 4.6984  Acc@1:  1.0000 Pruned: 54.26% 
+Train: 58 [   0/195 (  0%)]  Loss: 4.670 (4.67)  Time: 1.311s,  195.27/s  (1.311s,  195.27/s)  LR: 1.000e-07  Data: 0.807 (0.807)
+Train: 58 [ 100/195 ( 52%)]  Loss: 4.708 (4.71)  Time: 0.516s,  495.73/s  (0.524s,  488.31/s)  LR: 1.000e-07  Data: 0.015 (0.023)
+Train: 58 [ 194/195 (100%)]  Loss: 4.751 (4.71)  Time: 0.503s,  508.87/s  (0.521s,  491.47/s)  LR: 1.000e-07  Data: 0.000 (0.019)
+Test: [   0/39]  Time: 0.617 (0.617)  Loss:  4.6875 (4.6875)  Acc@1:  0.7812 ( 0.7812)  Acc@5:  4.6875 ( 4.6875)
+Test: [  39/39]  Time: 0.016 (0.219)  Loss:  4.8008 (4.6978)  Acc@1:  0.0000 ( 1.0000)  Acc@5:  6.2500 ( 5.0800)
+Test: [Whole Val]  Time: 8.768  Loss: 4.6978  Acc@1:  1.0000 Pruned: 54.26% 
+Train: 59 [   0/195 (  0%)]  Loss: 4.712 (4.71)  Time: 1.224s,  209.20/s  (1.224s,  209.20/s)  LR: 1.000e-07  Data: 0.724 (0.724)
+Train: 59 [ 100/195 ( 52%)]  Loss: 4.688 (4.71)  Time: 0.517s,  494.73/s  (0.525s,  488.07/s)  LR: 1.000e-07  Data: 0.016 (0.023)
+Train: 59 [ 194/195 (100%)]  Loss: 4.699 (4.71)  Time: 0.503s,  508.82/s  (0.520s,  491.85/s)  LR: 1.000e-07  Data: 0.000 (0.019)
+Test: [   0/39]  Time: 0.617 (0.617)  Loss:  4.6836 (4.6836)  Acc@1:  0.7812 ( 0.7812)  Acc@5:  4.6875 ( 4.6875)
+Test: [  39/39]  Time: 0.016 (0.220)  Loss:  4.8008 (4.6965)  Acc@1:  0.0000 ( 1.0000)  Acc@5:  6.2500 ( 5.0800)
+Test: [Whole Val]  Time: 8.785  Loss: 4.6965  Acc@1:  1.0000 Pruned: 54.26% 
+Train: 60 [   0/195 (  0%)]  Loss: 4.691 (4.69)  Time: 1.254s,  204.16/s  (1.254s,  204.16/s)  LR: 1.000e-07  Data: 0.754 (0.754)
+Train: 60 [ 100/195 ( 52%)]  Loss: 4.709 (4.71)  Time: 0.518s,  494.18/s  (0.524s,  488.40/s)  LR: 1.000e-07  Data: 0.017 (0.023)
+Train: 60 [ 194/195 (100%)]  Loss: 4.734 (4.71)  Time: 0.504s,  507.71/s  (0.521s,  491.73/s)  LR: 1.000e-07  Data: 0.000 (0.019)
+Test: [   0/39]  Time: 0.607 (0.607)  Loss:  4.6836 (4.6836)  Acc@1:  0.7812 ( 0.7812)  Acc@5:  4.6875 ( 4.6875)
+Test: [  39/39]  Time: 0.016 (0.219)  Loss:  4.7969 (4.6953)  Acc@1:  0.0000 ( 1.0000)  Acc@5:  6.2500 ( 5.0800)
+Test: [Whole Val]  Time: 8.752  Loss: 4.6953  Acc@1:  1.0000 Pruned: 54.26% 
+*** Best metric: OrderedDict([('loss', 4.695275), ('top1', 1.0), ('top5', 5.08), ('pruned', 0.5425897854477612)]) (epoch 60)
